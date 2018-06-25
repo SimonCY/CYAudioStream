@@ -210,8 +210,7 @@ static id _instance;
     }
 }
 
-//自定提醒窗口
-NS_INLINE void tipWithMessage(NSString *message){
+NS_INLINE void tipWithMessage(NSString *message) {
     
     dispatch_async(dispatch_get_main_queue(), ^{
         
@@ -219,6 +218,15 @@ NS_INLINE void tipWithMessage(NSString *message){
     });
     
     
+}
+
+@end
+
+@implementation UIViewController (CYRemoteControl)
+
+- (void)remoteControlReceivedWithEvent:(UIEvent *)event {
+    
+    [[CYMusicPlayer sharedPlayer].remoteControlObserver remoteControlReceivedWithEvent:event];
 }
 
 @end
