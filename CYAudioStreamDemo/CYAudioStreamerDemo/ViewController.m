@@ -157,10 +157,5 @@ static NSString * const _videoUrl0 = @"http://clips.vorwaerts-gmbh.de/big_buck_b
     }
 }
 
-//- (void)remoteControlReceivedWithEvent:(UIEvent *)event {
-//
-//    [self.player.remoteControlObserver remoteControlReceivedWithEvent:event];
-//
-//}
-
+ 
 @end
