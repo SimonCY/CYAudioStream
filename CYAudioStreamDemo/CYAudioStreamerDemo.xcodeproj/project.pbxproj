@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B607DF5E20E0EE7C0076898D /* FreeStreamer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B607DF5D20E0EE7C0076898D /* FreeStreamer.framework */; };
+		B607DF5F20E0EED70076898D /* FreeStreamer.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B607DF5D20E0EE7C0076898D /* FreeStreamer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B66A268620D0BAC600532DA9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B66A268520D0BAC600532DA9 /* AppDelegate.m */; };
 		B66A268920D0BAC600532DA9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B66A268820D0BAC600532DA9 /* ViewController.m */; };
 		B66A268C20D0BAC600532DA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B66A268A20D0BAC600532DA9 /* Main.storyboard */; };
@@ -21,8 +23,6 @@
 		B6B688DF20D8E5A4005E8C85 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B6B688DE20D8E5A4005E8C85 /* libxml2.tbd */; };
 		B6B688E320D8E618005E8C85 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6B688E220D8E618005E8C85 /* UIKit.framework */; };
 		B6B6893920D8FB31005E8C85 /* CYAudioStreamModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B6893820D8FB31005E8C85 /* CYAudioStreamModel.m */; };
-		B6CD269820DB4BE200DEBB50 /* FreeStreamer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6CD269720DB4BE200DEBB50 /* FreeStreamer.framework */; };
-		B6CD269920DB4BE600DEBB50 /* FreeStreamer.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B6CD269720DB4BE200DEBB50 /* FreeStreamer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B6CD26AE20DCE04200DEBB50 /* CYRemoteControlObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = B6CD26AD20DCE04200DEBB50 /* CYRemoteControlObserver.m */; };
 		B6CD26B120DCE26F00DEBB50 /* CYMusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B6CD26B020DCE26F00DEBB50 /* CYMusicPlayer.m */; };
 		B6CD26BC20DCF00E00DEBB50 /* cy_artwork_unknown.png in Resources */ = {isa = PBXBuildFile; fileRef = B6CD26BB20DCF00E00DEBB50 /* cy_artwork_unknown.png */; };
@@ -35,13 +35,14 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B6CD269920DB4BE600DEBB50 /* FreeStreamer.framework in CopyFiles */,
+				B607DF5F20E0EED70076898D /* FreeStreamer.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B607DF5D20E0EE7C0076898D /* FreeStreamer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FreeStreamer.framework; sourceTree = "<group>"; };
 		B66A268120D0BAC600532DA9 /* CYAudioStreamerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CYAudioStreamerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B66A268420D0BAC600532DA9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B66A268520D0BAC600532DA9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,7 +63,6 @@
 		B6B688E220D8E618005E8C85 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B6B6893720D8FB31005E8C85 /* CYAudioStreamModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYAudioStreamModel.h; sourceTree = "<group>"; };
 		B6B6893820D8FB31005E8C85 /* CYAudioStreamModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYAudioStreamModel.m; sourceTree = "<group>"; };
-		B6CD269720DB4BE200DEBB50 /* FreeStreamer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FreeStreamer.framework; sourceTree = "<group>"; };
 		B6CD26AC20DCE04200DEBB50 /* CYRemoteControlObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYRemoteControlObserver.h; sourceTree = "<group>"; };
 		B6CD26AD20DCE04200DEBB50 /* CYRemoteControlObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYRemoteControlObserver.m; sourceTree = "<group>"; };
 		B6CD26AF20DCE26F00DEBB50 /* CYMusicPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYMusicPlayer.h; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 				B6B688B920D8C3FC005E8C85 /* AudioToolbox.framework in Frameworks */,
 				B6B688B720D8C3E9005E8C85 /* CFNetwork.framework in Frameworks */,
 				B6B688B520D8C3DD005E8C85 /* MediaPlayer.framework in Frameworks */,
-				B6CD269820DB4BE200DEBB50 /* FreeStreamer.framework in Frameworks */,
+				B607DF5E20E0EE7C0076898D /* FreeStreamer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,7 +155,7 @@
 		B6CD269520DB4AE000DEBB50 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				B6CD269720DB4BE200DEBB50 /* FreeStreamer.framework */,
+				B607DF5D20E0EE7C0076898D /* FreeStreamer.framework */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
