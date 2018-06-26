@@ -1,8 +1,9 @@
 # CYAudioStream
-&emsp;&emsp;CYAudioStream是基于开源框架FreeStreamer封装的流媒体播放器，简单易用。
+&emsp;&emsp;CYAudioStream是基于开源框架FreeStreamer封装的流媒体播放器。在FreeStreamer的基础上优化了播放、缓冲进度等事件的回调方式，CYMusicPlayer封装了基本的列表播放业务，简单易用。
 
 ## Features
  
+ * 支持音频格式等基本特性请查看[FreeStreamer](https://github.com/muhku/FreeStreamer)
  * 支持在线音频边存边播
  * 支持后台播放
  * 支持耳机、锁屏远程事件响应
