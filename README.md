@@ -1,5 +1,5 @@
 # CYAudioStream
-&emsp;&emsp;CYAudioStream是基于开源框架FreeStreamer封装的流媒体播放器。在FreeStreamer的基础上优化了播放、缓冲进度等事件的回调方式，CYMusicPlayer封装了基本的列表播放业务，简单易用。
+&emsp;&emsp;CYAudioStream是基于开源框架**FreeStreamer**封装的流媒体播放器。在FreeStreamer的基础上优化了播放、缓冲进度等事件的回调方式，CYMusicPlayer封装了基本的列表播放业务，简单易用。
 
 ## Features
  
@@ -21,7 +21,7 @@
 -  **MediaPlayer.framework**
 -  **FreeStreamer.framework**
  
-为了防止编译通过后运行时报“image not found”找不到镜像的错误，需要在build phases中新建一个copy file phase
+为了防止编译通过后运行时报“image not found”找不到镜像的错误，需要在build phases中新建一个**copy file** phase
 
 ![这里写图片描述](https://github.com/SimonCY/CYAudioStream/raw/master/ScreenShots/guide_framework.jpeg)
 
