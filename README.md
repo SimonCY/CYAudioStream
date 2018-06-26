@@ -28,13 +28,13 @@
 
 使用时，导入CYMusicPlayer,
 
-```
+```Objc
 #import "CYMusicPlayer.h"
 ```
 
 然后通过CYMusicPlayer单例方法创建音乐播放器，并设置播放列表使用即可，
 
-```
+```Objc
     self.player = [CYMusicPlayer sharedPlayer];
     self.player.audioStream.delegate = self;
     
@@ -53,7 +53,7 @@
 
 播放进度等回调播放相关回调由CYAudioStreamDelegate提供，
 
-```
+```Objc
 @protocol CYAudioStreamDelegate <NSObject>
 
 @optional
