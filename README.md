@@ -3,23 +3,23 @@
 
 ## Features
  
- * 支持音频格式等基本特性请查看[FreeStreamer](https://github.com/muhku/FreeStreamer)
- * 支持在线音频边存边播
- * 支持后台播放
- * 支持耳机、锁屏远程事件响应
- * 支持播放列表管理
+- **支持音频格式等基本特性请查看[FreeStreamer](https://github.com/muhku/FreeStreamer)**
+- **支持在线音频边存边播**
+- **支持后台播放**
+- **支持耳机、锁屏远程事件响应**
+- **支持播放列表管理**
 
 ## Installation
 
 将CYAudioStream文件夹拖拽至工程目录下，在build phases中导入依赖库：
 
- * UIKit.framework
- * libxml2.tbd
- * AVFoundation.framework
- * AudioToolBox.framework
- * CFNetworking.framework
- *  MediaPlayer.framework
- * FreeStreamer.framework
+-  **UIKit.framework**
+-  **libxml2.tbd**
+-  **AVFoundation.framework**
+-  **AudioToolBox.framework**
+-  **CFNetworking.framework**
+-  **MediaPlayer.framework**
+-  **FreeStreamer.framework**
  
 为了防止编译通过后运行时报“image not found”找不到镜像的错误，需要在build phases中新建一个copy file phase
 
@@ -33,7 +33,7 @@
 #import "CYMusicPlayer.h"
 ```
 
-然后通过CYMusicPlayer单例方法创建音乐播放器，并设置播放列表使用即可，
+然后通过**CYMusicPlayer**单例方法创建音乐播放器，并设置播放列表使用即可，
 
 ```Objc
     self.player = [CYMusicPlayer sharedPlayer];
@@ -52,7 +52,7 @@
     [self.player play];
 ```
 
-播放进度等回调播放相关回调由CYAudioStreamDelegate提供，
+播放进度等回调播放相关回调由**CYAudioStreamDelegate**提供，
 
 ```Objc
 @protocol CYAudioStreamDelegate <NSObject>
@@ -71,6 +71,6 @@
 
 @end
 ```
-CYRemoteControlObserver会自动监听和处理远程控制事件，如需后台播放，须在capabilities中对Background Modes进行设置。
+CYRemoteControlObserver会自动监听和处理远程控制事件，如需后台播放，须在**capabilities中对Background Modes**进行设置。
 
 ![这里写图片描述](https://github.com/SimonCY/CYAudioStream/raw/master/ScreenShots/guide_backmode.jpeg)
