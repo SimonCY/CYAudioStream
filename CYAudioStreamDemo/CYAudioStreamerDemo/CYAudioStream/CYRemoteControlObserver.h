@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@import MediaPlayer;
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface CYRemoteControlObserver : NSObject
 

@@ -190,9 +190,9 @@ static id _instance;
 
 - (void)next {
     
-    if (!self.currentModel) return;
+    if (self.currentModel == nil ||self.playList.count == 0 || ![self.playList containsObject:self.currentModel]) return;
     
-    NSInteger currentIndex = [_playList indexOfObject:self.audioStream.currentModel];
+    NSInteger currentIndex = [_playList indexOfObject:self.currentModel];
     
     NSInteger totalCount = _playList.count;
     
@@ -230,9 +230,9 @@ static id _instance;
 
 - (void)previous {
     
-    if (!self.currentModel) return;
+    if (self.currentModel == nil ||self.playList.count == 0 || ![self.playList containsObject:self.currentModel]) return;
     
-    NSInteger currentIndex = [_playList indexOfObject:self.audioStream.currentModel];
+    NSInteger currentIndex = [_playList indexOfObject:self.currentModel];
     
     NSInteger totalCount = _playList.count;
     
