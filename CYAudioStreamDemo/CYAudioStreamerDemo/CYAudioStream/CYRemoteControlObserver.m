@@ -21,31 +21,21 @@ static id _instance;
 
 + (instancetype)sharedObverser {
     
-    if (_instance == nil) { // 防止频繁加锁
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         
-        @synchronized(self) {
-            
-            if (_instance == nil) { // 防止创建多次
-                
-                _instance = [[self alloc] init];
-            }
-        }
-    }
+        _instance = [[self alloc] init];
+    });
     return _instance;
 }
 
 + (id)allocWithZone:(struct _NSZone *)zone {
     
-    if (_instance == nil) { // 防止频繁加锁
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         
-        @synchronized(self) {
-            
-            if (_instance == nil) { // 防止创建多次
-                
-                _instance = [super allocWithZone:zone];
-            }
-        }
-    }
+        _instance = [super allocWithZone:zone];
+    });
     return _instance;
 }
 

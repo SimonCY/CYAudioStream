@@ -18,31 +18,21 @@ static id _instance;
 
 + (instancetype)sharedPlayer {
     
-    if (_instance == nil) { // 防止频繁加锁
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         
-        @synchronized(self) {
-            
-            if (_instance == nil) { // 防止创建多次
-                
-                _instance = [[self alloc] init];
-            }
-        }
-    }
+        _instance = [[self alloc] init];
+    });
     return _instance;
 }
 
 + (id)allocWithZone:(struct _NSZone *)zone {
     
-    if (_instance == nil) { // 防止频繁加锁
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         
-        @synchronized(self) {
-            
-            if (_instance == nil) { // 防止创建多次
-                
-                _instance = [super allocWithZone:zone];
-            }
-        }
-    }
+        _instance = [super allocWithZone:zone];
+    });
     return _instance;
 }
 
@@ -81,7 +71,7 @@ static id _instance;
 
 - (void)addModelToPlayList:(CYAudioStreamModel *)model {
     
-    @synchronized(self) {
+    @synchronized(_playList) {
  
         [_playList addObject:model];
     }
@@ -89,7 +79,7 @@ static id _instance;
 
 - (void)insertModel:(CYAudioStreamModel *)model toPlayListAtIndex:(NSInteger)index{
     
-    @synchronized(self) {
+    @synchronized(_playList) {
         
         if (index < 0 || index >= _playList.count) {
             
@@ -103,7 +93,7 @@ static id _instance;
 - (void)removeModelFromPlayList:(CYAudioStreamModel *)model {
     
 
-    @synchronized(self) {
+    @synchronized(_playList) {
         
         if ([self.audioStream.currentModel isEqual:model]) {
             
@@ -119,7 +109,7 @@ static id _instance;
 
 - (void)removeModelFromPlayListAtIndex:(NSInteger)index {
     
-    @synchronized(self) {
+    @synchronized(_playList) {
         
         CYAudioStreamModel *model = _playList[index];
         [self removeModelFromPlayList:model];
@@ -130,12 +120,12 @@ static id _instance;
     
     [self stop];
     
-    @synchronized(self) {
+    @synchronized(_playList) {
         
         [_playList removeAllObjects];
     }
 }
-
+ 
 - (void)playModelAtIndex:(NSInteger)index {
     
     if (index < 0 || index >= _playList.count) {
