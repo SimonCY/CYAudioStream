@@ -25,6 +25,8 @@
 
 ![这里写图片描述](https://github.com/SimonCY/CYAudioStream/raw/master/ScreenShots/guide_framework.jpeg)
 
+ **注意：** demo中默认的FreeStreamer.Framework是由lipo命令合成的**真机+模拟器**动态库，方便开发阶段使用模拟器调试，打包时请手动将其替换为iphones_freestream目录下的**真机动态库**。
+
 ## Usage
 
 使用时，导入CYMusicPlayer,
